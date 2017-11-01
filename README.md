@@ -48,9 +48,6 @@ We have upgraded the source code of [echarts](https://github.com/ecomfe/echarts)
 
 ## Caution
 
-+ It just uses AMD-like API, but not an AMD loader. For example, modules are not shared between different calling of `simpleModuleLoader.load()`.
++ It just provides AMD-like API, but not an AMD loader. For example, modules are not shared between different calling of `requireES(...)`.
 
-+ Whether import `*` or `default` is determined by the module itself. That is, if the module only export `default` (like `xxx/SomeClz`), we import `default`, otherwise import `*` (like `xxx/util`).
-
-+ So DO NOT use it in production environment. This project this aimed at debug and run unit test in browser for ES modules in development.
-
++ Whether import `*` or `default` is determined by the module itself. That is, if the module (like `xxx/SomeClz`) only export `default` , it imports `default`, otherwise (like `xxx/util`) it imports `*`.
