@@ -7,8 +7,14 @@ Load [ES Modules](http://www.ecma-international.org/ecma-262/6.0/#sec-modules) i
 
 ## Usage
 
+Import the scripts of `requireES` and `rollup.browser.js`.
+```html
+<script src="rollup.browser.js"></script>
+<script src="requireES.js"></script>
+```
+
+Config it in the same way as [AMD config](https://github.com/amdjs/amdjs-api/wiki/Common-Config).
 ```js
-// AMD config like, see <https://github.com/amdjs/amdjs-api/wiki/Common-Config>
 requireES.config({
     baseUrl: '..',
     paths: {
@@ -24,6 +30,7 @@ requireES.config({
 });
 ```
 
+Load modules.
 ```js
 requireES([
     'xxx/esModuleA',
